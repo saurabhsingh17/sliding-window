@@ -35,3 +35,26 @@ public class MaximumSumSubarrayOfSizeK {
     }
 }
 ```
+### General format for Variable Size Window
+```java
+public class VariableSizeSlidingWindow {
+    static long slidingWindow() {
+        while(j<size()){
+            //calculations
+            if (condition < k){
+                j++;
+            } else if (condition == k) {
+                //ans calculation
+                j++;
+            } else if (condition > k) {
+                while(condition > k){
+                    //remove calculation for i
+                    i++;
+                }
+                j++;
+            }
+        }
+        return ans;
+    }
+}
+```
